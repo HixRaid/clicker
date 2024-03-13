@@ -73,28 +73,30 @@ text = "Play"
 
 [node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
 margin_left = -176.0
+margin_top = 16.0
 margin_right = -16.0
-margin_bottom = 16.0
+margin_bottom = 32.0
 mouse_filter = 2
 
 [node name="DecorativePanel2" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
 margin_left = -96.0
-margin_top = 32.0
+margin_top = 48.0
 margin_right = -16.0
-margin_bottom = 48.0
+margin_bottom = 64.0
 mouse_filter = 2
 
 [node name="DecorativePanel3" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
 margin_left = 240.0
+margin_top = 16.0
 margin_right = 400.0
-margin_bottom = 16.0
+margin_bottom = 32.0
 mouse_filter = 2
 
 [node name="DecorativePanel4" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
 margin_left = 240.0
-margin_top = 32.0
+margin_top = 48.0
 margin_right = 320.0
-margin_bottom = 48.0
+margin_bottom = 64.0
 mouse_filter = 2
 
 [node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
@@ -114,8 +116,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -144.0
-margin_top = -112.0
+margin_left = -184.0
+margin_top = -120.0
 margin_right = -32.0
 margin_bottom = -32.0
 focus_mode = 0
