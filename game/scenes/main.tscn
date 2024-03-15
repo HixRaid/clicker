@@ -1,9 +1,78 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=4]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("InterfaceSwitch:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("InterfaceSwitch:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "play"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("InterfaceSwitch:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("InterfaceSwitch:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -300 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("InterfaceSwitch")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.15 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_set_visible"
+} ]
+}
 
 [node name="Main" type="Node"]
 
@@ -138,6 +207,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
+[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 120.0
+text = "Menu"
+
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -153,4 +229,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
+[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 120.0
+text = "Back"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
+anims/RESET = SubResource( 1 )
+anims/play = SubResource( 2 )
+
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Play/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
