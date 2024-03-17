@@ -112,31 +112,38 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="GameNameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
-anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -360.0
-margin_top = -288.0
-margin_right = 360.0
-margin_bottom = -64.0
+margin_top = -208.0
+margin_bottom = -80.0
 custom_fonts/font = ExtResource( 4 )
 text = "Clicker"
 align = 1
 valign = 1
 
-[node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
+[node name="MenuControl" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -112.0
+margin_left = -264.0
+margin_top = -80.0
+margin_right = 264.0
+margin_bottom = 80.0
+
+[node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -104.0
 margin_top = -64.0
-margin_right = 112.0
+margin_right = 104.0
 margin_bottom = 64.0
 mouse_filter = 2
 
-[node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
+[node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -145,7 +152,7 @@ margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel/Button"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/Button"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -158,46 +165,32 @@ mouse_filter = 2
 texture = ExtResource( 5 )
 expand = true
 
-[node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
-margin_left = -176.0
+[node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
+margin_left = -144.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = 32.0
 mouse_filter = 2
 
-[node name="DecorativePanel2" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
-margin_left = -96.0
+[node name="DecorativePanel2" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
+margin_left = -80.0
 margin_top = 48.0
 margin_right = -16.0
 margin_bottom = 64.0
 mouse_filter = 2
 
-[node name="DecorativePanel3" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
-margin_left = 240.0
-margin_top = 16.0
-margin_right = 400.0
-margin_bottom = 32.0
-mouse_filter = 2
-
-[node name="DecorativePanel4" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel"]
-margin_left = 240.0
-margin_top = 48.0
-margin_right = 320.0
-margin_bottom = 64.0
-mouse_filter = 2
-
-[node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
+[node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -88.0
-margin_top = 80.0
-margin_right = -8.0
-margin_bottom = 160.0
+margin_left = 120.0
+margin_top = -40.0
+margin_right = 200.0
+margin_bottom = 40.0
 focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/SettingsButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -211,14 +204,12 @@ texture = ExtResource( 6 )
 expand = true
 
 [node name="InfoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 8.0
-margin_top = 80.0
-margin_right = 88.0
-margin_bottom = 160.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = -112.0
+margin_right = 112.0
+margin_bottom = -32.0
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/InfoButton"]
 anchor_left = 0.5
@@ -329,7 +320,7 @@ expand = true
 anims/RESET = SubResource( 1 )
 anims/play = SubResource( 2 )
 
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Play/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
