@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://game/images/ui/exit.png" type="Texture" id=8]
 [ext_resource path="res://game/images/ui/menu.png" type="Texture" id=9]
 [ext_resource path="res://game/images/ui/back.png" type="Texture" id=10]
+[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -101,7 +102,7 @@ open_interface = "Menu"
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -368,6 +369,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/InfoButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Play/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
