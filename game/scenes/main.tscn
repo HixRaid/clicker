@@ -89,6 +89,7 @@ tracks/2/keys = {
 [node name="Canvas" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="Canvas"]
+unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2

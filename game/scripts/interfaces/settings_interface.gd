@@ -1,9 +1,11 @@
 extends "res://game/scripts/interfaces/interface.gd"
 
 onready var language_option_button = $Panel/SettingsControl/LanguagePanel/OptionButton
+onready var ui_panel = $"%UI"
 
 
 func _ready():
+	set_safe_area()
 	match OS.get_locale_language():
 		"en":
 			language_option_button.selected = 0
@@ -11,6 +13,13 @@ func _ready():
 			language_option_button.selected = 1
 		"tr":
 			language_option_button.selected = 2
+
+
+func set_safe_area():
+	var safe_area = OS.get_window_safe_area()
+	var ratio = get_viewport_rect().size.x / get_viewport().size.x
+	ui_panel.rect_position = ratio * safe_area.position
+	ui_panel.rect_size = ratio * safe_area.size
 
 
 func _on_language_selected(index):
@@ -35,3 +44,4 @@ func _on_scale_selected(index):
 
 func set_scale(value):
 	get_tree().set_screen_stretch(SceneTree.STRETCH_MODE_2D, SceneTree.STRETCH_ASPECT_EXPAND, Vector2(720, 1280), value)
+	set_safe_area()
