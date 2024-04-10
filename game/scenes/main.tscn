@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=11]
 [ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=12]
 [ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=13]
-[ext_resource path="res://game/resources/theme/styles/right_panel_style.tres" type="StyleBox" id=14]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -351,13 +350,46 @@ texture = ExtResource( 9 )
 expand = true
 
 [node name="PopupPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
-anchor_left = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -296.0
+margin_top = -392.0
+margin_right = 296.0
+margin_bottom = 576.0
+
+[node name="LeftButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/PopupPanel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = -16.0
+text = "<-"
+
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/PopupPanel"]
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -600.0
-margin_top = 216.0
-margin_bottom = -32.0
-custom_styles/panel = ExtResource( 14 )
+margin_left = 112.0
+margin_top = -96.0
+margin_right = -112.0
+margin_bottom = -16.0
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="RightButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/PopupPanel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = -96.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "->"
 
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
