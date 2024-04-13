@@ -137,6 +137,7 @@ margin_left = -264.0
 margin_top = -80.0
 margin_right = 264.0
 margin_bottom = 80.0
+mouse_filter = 2
 
 [node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl"]
 anchor_left = 0.5
@@ -272,14 +273,25 @@ mouse_filter = 2
 [node name="ProgressBar" type="ProgressBar" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
 anchor_right = 1.0
 margin_bottom = 72.0
+mouse_filter = 2
 
-[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
-margin_left = 32.0
-margin_top = 104.0
-margin_right = 112.0
-margin_bottom = 184.0
+[node name="TopPanel" type="Control" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 88.0
+margin_right = -16.0
+margin_bottom = 200.0
+mouse_filter = 2
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/MenuButton"]
+[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -40.0
+margin_right = 96.0
+margin_bottom = 40.0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/MenuButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -292,53 +304,61 @@ mouse_filter = 2
 texture = ExtResource( 9 )
 expand = true
 
-[node name="CPSLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
-margin_left = 144.0
-margin_top = 104.0
-margin_right = 296.0
-margin_bottom = 144.0
+[node name="CPSLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 128.0
+margin_top = -40.0
+margin_right = 280.0
 text = "CPS: 0"
 valign = 1
 
-[node name="RecordLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
-margin_left = 144.0
-margin_top = 152.0
-margin_right = 296.0
-margin_bottom = 184.0
+[node name="RecordLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 128.0
+margin_top = 8.0
+margin_right = 280.0
+margin_bottom = 40.0
 custom_fonts/font = ExtResource( 13 )
 text = "RECORD: 0"
 valign = 1
 
-[node name="ScoreLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+[node name="ScoreLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+anchor_top = 0.5
 anchor_right = 1.0
-margin_left = 312.0
-margin_top = 104.0
-margin_right = -144.0
-margin_bottom = 136.0
+anchor_bottom = 0.5
+margin_left = 296.0
+margin_top = -40.0
+margin_right = -160.0
+margin_bottom = -8.0
 custom_fonts/font = ExtResource( 13 )
 text = "SCORE"
 align = 2
 valign = 1
 
-[node name="ScoreValueLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+[node name="ScoreValueLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+anchor_top = 0.5
 anchor_right = 1.0
-margin_left = 312.0
-margin_top = 144.0
-margin_right = -144.0
-margin_bottom = 184.0
+anchor_bottom = 0.5
+margin_left = 296.0
+margin_right = -160.0
+margin_bottom = 40.0
 text = "0"
 align = 2
 valign = 1
 
-[node name="ShopButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+[node name="ShopButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-margin_left = -112.0
-margin_top = 104.0
-margin_right = -32.0
-margin_bottom = 184.0
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -40.0
+margin_right = -16.0
+margin_bottom = 40.0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/ShopButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -360,6 +380,7 @@ margin_left = -280.0
 margin_top = -344.0
 margin_right = 280.0
 margin_bottom = 528.0
+mouse_filter = 2
 
 [node name="TopPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel"]
 anchor_left = 0.5
@@ -370,6 +391,7 @@ margin_left = -264.0
 margin_top = -420.0
 margin_right = 264.0
 margin_bottom = -308.0
+mouse_filter = 2
 
 [node name="LeftButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel"]
 anchor_top = 0.5
@@ -437,6 +459,7 @@ margin_left = -264.0
 margin_top = -284.0
 margin_right = 264.0
 margin_bottom = 420.0
+mouse_filter = 2
 
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
@@ -481,6 +504,7 @@ margin_left = -216.0
 margin_top = -216.0
 margin_right = 216.0
 margin_bottom = 216.0
+mouse_filter = 2
 
 [node name="LanguagePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl"]
 anchor_left = 0.5
@@ -491,6 +515,7 @@ margin_left = -200.0
 margin_top = -200.0
 margin_right = 200.0
 margin_bottom = -104.0
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/LanguagePanel"]
 anchor_right = 1.0
@@ -522,6 +547,7 @@ margin_left = -200.0
 margin_top = -72.0
 margin_right = 200.0
 margin_bottom = 24.0
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/ScalePanel"]
 anchor_right = 1.0
@@ -552,6 +578,14 @@ margin_left = -200.0
 margin_top = 128.0
 margin_right = 200.0
 margin_bottom = 200.0
+mouse_filter = 2
+
+[node name="DecorativePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/SoundPanel"]
+margin_left = 16.0
+margin_top = -80.0
+margin_right = 216.0
+margin_bottom = -72.0
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/SoundPanel"]
 anchor_right = 1.0
@@ -567,12 +601,6 @@ anchor_bottom = 1.0
 margin_left = 24.0
 margin_right = -24.0
 focus_mode = 0
-
-[node name="Panel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/SoundPanel"]
-margin_left = 16.0
-margin_top = -80.0
-margin_right = 216.0
-margin_bottom = -72.0
 
 [node name="Info" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
@@ -608,13 +636,23 @@ mouse_filter = 2
 texture = ExtResource( 10 )
 expand = true
 
-[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
+[node name="Panel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -232.0
+margin_right = 256.0
+margin_bottom = 344.0
+
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Info/Panel/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 64.0
-margin_top = 128.0
-margin_right = -80.0
-margin_bottom = -128.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
 text = "Clicker is a fun game where the main gameplay is to perform a lot of mouse clicks (or taps on the screen) to earn in-game currency or achieve certain goals. The goal of the game is usually to become rich or reach the maximum level of development. Develop your character, improve your skills and become the best in the clicker genre!"
 valign = 1
 autowrap = true
@@ -627,7 +665,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/InfoButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Play/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/LanguagePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_language_selected"]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/SettingsControl/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
