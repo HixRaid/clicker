@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -14,7 +14,9 @@
 [ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=12]
 [ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=13]
 [ext_resource path="res://game/images/ui/arrow_left.png" type="Texture" id=14]
-[ext_resource path="res://game/images/ui/close.png" type="Texture" id=15]
+[ext_resource path="res://game/images/ui/basket.png" type="Texture" id=15]
+[ext_resource path="res://game/resources/theme/styles/bottom_panel_style.tres" type="StyleBox" id=16]
+[ext_resource path="res://game/images/ui/level.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -291,11 +293,8 @@ margin_right = -104.0
 mouse_filter = 2
 
 [node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/LeftPanel"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_top = -40.0
+anchor_bottom = 1.0
 margin_right = 80.0
-margin_bottom = 40.0
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/LeftPanel/MenuButton"]
 anchor_left = 0.5
@@ -352,16 +351,13 @@ text = "0"
 align = 2
 valign = 1
 
-[node name="ShopButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
+[node name="LevelButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel"]
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = -80.0
-margin_top = -40.0
-margin_bottom = 40.0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/ShopButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/TopPanel/LevelButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -371,7 +367,7 @@ margin_top = -24.0
 margin_right = 24.0
 margin_bottom = 24.0
 mouse_filter = 2
-texture = ExtResource( 15 )
+texture = ExtResource( 17 )
 expand = true
 
 [node name="ShopPanel" type="Control" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
@@ -379,9 +375,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -264.0
+margin_left = -280.0
 margin_top = -328.0
-margin_right = 264.0
+margin_right = 280.0
 margin_bottom = 400.0
 mouse_filter = 2
 
@@ -391,12 +387,11 @@ margin_bottom = 112.0
 mouse_filter = 2
 
 [node name="LeftButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel"]
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = 16.0
-margin_top = -40.0
+margin_top = 16.0
 margin_right = 96.0
-margin_bottom = 40.0
+margin_bottom = -16.0
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel/LeftButton"]
 anchor_left = 0.5
@@ -412,26 +407,24 @@ texture = ExtResource( 14 )
 expand = true
 
 [node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel"]
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = 112.0
-margin_top = -40.0
+margin_top = 16.0
 margin_right = -112.0
-margin_bottom = 40.0
+margin_bottom = -16.0
 text = "Level 1"
 align = 1
 valign = 1
 
 [node name="RightButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel"]
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = -96.0
-margin_top = -40.0
+margin_top = 16.0
 margin_right = -16.0
-margin_bottom = 40.0
+margin_bottom = -16.0
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel/TopPanel/RightButton"]
 anchor_left = 0.5
@@ -450,8 +443,109 @@ flip_h = true
 [node name="BottomPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Play/Panel/ShopPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 160.0
+margin_top = 144.0
 mouse_filter = 2
+
+[node name="BottomPanel" type="Control" parent="Canvas/UI/InterfaceSwitch/Play/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -280.0
+margin_top = -128.0
+margin_right = 280.0
+mouse_filter = 2
+
+[node name="LeftButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel"]
+anchor_bottom = 1.0
+margin_top = 24.0
+margin_right = 80.0
+margin_bottom = -24.0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/LeftButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 14 )
+expand = true
+
+[node name="Panel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_right = -104.0
+custom_styles/panel = ExtResource( 16 )
+
+[node name="ShopButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/Panel"]
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 112.0
+margin_bottom = -16.0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/Panel/ShopButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource( 15 )
+expand = true
+
+[node name="SaleButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 136.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "SALE"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/Panel/SaleButton"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 7 )
+expand = true
+
+[node name="RightButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = 24.0
+margin_bottom = -24.0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Play/Panel/BottomPanel/RightButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 14 )
+expand = true
+flip_h = true
 
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
