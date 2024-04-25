@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=17 format=2]
+[gd_resource type="Theme" load_steps=19 format=2]
 
 [ext_resource path="res://game/resources/theme/fonts/types/default_dynamic_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/resources/theme/styles/normal_style.tres" type="StyleBox" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://game/images/ui/grabber_disabled.png" type="Texture" id=14]
 [ext_resource path="res://game/images/ui/grabber.png" type="Texture" id=15]
 [ext_resource path="res://game/resources/theme/styles/grabber_area_style.tres" type="StyleBox" id=16]
+[ext_resource path="res://game/resources/theme/styles/scroll_style.tres" type="StyleBox" id=17]
+[ext_resource path="res://game/resources/theme/styles/grabber_style.tres" type="StyleBox" id=18]
 
 [resource]
 default_font = ExtResource( 1 )
@@ -60,3 +62,8 @@ ProgressBar/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
 ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 ProgressBar/styles/bg = ExtResource( 7 )
 ProgressBar/styles/fg = ExtResource( 6 )
+VScrollBar/styles/grabber = ExtResource( 18 )
+VScrollBar/styles/grabber_highlight = ExtResource( 18 )
+VScrollBar/styles/grabber_pressed = ExtResource( 18 )
+VScrollBar/styles/scroll = ExtResource( 17 )
+VScrollBar/styles/scroll_focus = ExtResource( 17 )
