@@ -95,12 +95,13 @@ tracks/2/keys = {
 
 [node name="Canvas" type="CanvasLayer" parent="."]
 
-[node name="UI" type="Control" parent="Canvas"]
+[node name="UI" type="ColorRect" parent="Canvas"]
 unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 3 )
+color = Color( 0.188235, 0.188235, 0.188235, 1 )
 
 [node name="InterfaceSwitch" type="Control" parent="Canvas/UI"]
 anchor_right = 1.0
