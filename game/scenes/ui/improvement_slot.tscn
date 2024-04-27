@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://game/resources/theme/styles/empty_style.tres" type="StyleBox" id=1]
+[ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=3]
+[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=4]
+[ext_resource path="res://game/scripts/ui/improvement_slot.gd" type="Script" id=5]
+
+[node name="ImprovementSlot" type="Control"]
+margin_right = 496.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 0, 92 )
+mouse_filter = 2
+script = ExtResource( 5 )
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -208.0
+margin_bottom = -40.0
+text = "Improvement"
+valign = 1
+
+[node name="PriceCountLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -32.0
+margin_right = -208.0
+custom_fonts/font = ExtResource( 2 )
+text = "100$ 0/10"
+valign = 1
+
+[node name="BuyButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = -40.0
+margin_right = -22.0
+margin_bottom = 40.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+text = "Buy"

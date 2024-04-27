@@ -2,7 +2,7 @@ extends "res://game/scripts/interfaces/interface.gd"
 
 onready var language_option_button = $Panel/SettingsControl/LanguagePanel/OptionButton
 onready var scale_option_button = $Panel/SettingsControl/ScalePanel/OptionButton
-onready var ui_panel = $"%UI"
+onready var ui_control = $"%Control"
 
 func _ready():
 	if OS.has_feature("mobile") or OS.has_feature("web") and JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)", true):
@@ -25,8 +25,8 @@ func _ready():
 func set_safe_area():
 	var safe_area = OS.get_window_safe_area()
 	var ratio = get_viewport_rect().size.x / get_viewport().size.x
-	ui_panel.rect_position = ratio * safe_area.position
-	ui_panel.rect_size = ratio * safe_area.size
+	ui_control.rect_position = ratio * safe_area.position
+	ui_control.rect_size = ratio * safe_area.size
 
 
 func _on_language_selected(index):
