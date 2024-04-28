@@ -1,0 +1,138 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/scenes/ui/improvement_slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/images/ui/arrow_left.png" type="Texture" id=3]
+
+[node name="ShopPanel" type="Control"]
+margin_right = 560.0
+margin_bottom = 744.0
+rect_pivot_offset = Vector2( 280, 372 )
+mouse_filter = 2
+
+[node name="TopPanel" type="Panel" parent="."]
+anchor_right = 1.0
+margin_bottom = 112.0
+mouse_filter = 2
+
+[node name="PreviousButton" type="Button" parent="TopPanel"]
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 96.0
+margin_bottom = -16.0
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="TopPanel/PreviousButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="TopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 112.0
+margin_top = 16.0
+margin_right = -112.0
+margin_bottom = -16.0
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="NextButton" type="Button" parent="TopPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+
+[node name="Icon" type="TextureRect" parent="TopPanel/NextButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+flip_h = true
+
+[node name="BottomPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 144.0
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BottomPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+scroll_horizontal_enabled = false
+
+[node name="ImprovementsContainer" type="VBoxContainer" parent="BottomPanel/ScrollContainer"]
+margin_right = 508.0
+margin_bottom = 632.0
+size_flags_horizontal = 3
+custom_constants/separation = 16
+
+[node name="ImprovementSlot1" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_right = 508.0
+title = "Improvement 1"
+
+[node name="ImprovementSlot2" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_top = 108.0
+margin_right = 508.0
+margin_bottom = 200.0
+title = "Improvement 2"
+price = 200
+max_count = 9
+
+[node name="ImprovementSlot3" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_top = 216.0
+margin_right = 508.0
+margin_bottom = 308.0
+title = "Improvement 3"
+price = 500
+max_count = 8
+
+[node name="ImprovementSlot4" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_top = 324.0
+margin_right = 508.0
+margin_bottom = 416.0
+title = "Improvement 4"
+price = 1000
+max_count = 7
+can_buy = false
+
+[node name="ImprovementSlot5" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_top = 432.0
+margin_right = 508.0
+margin_bottom = 524.0
+title = "Improvement 5"
+price = 2000
+max_count = 6
+can_buy = false
+
+[node name="ImprovementSlot6" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
+margin_top = 540.0
+margin_right = 508.0
+margin_bottom = 632.0
+title = "Improvement 6"
+price = 5000
+max_count = 5
+can_buy = false

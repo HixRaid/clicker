@@ -1,0 +1,100 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://game/images/ui/arrow_left.png" type="Texture" id=2]
+[ext_resource path="res://game/images/ui/basket.png" type="Texture" id=3]
+[ext_resource path="res://game/resources/theme/styles/bottom_panel_style.tres" type="StyleBox" id=4]
+
+[node name="ControlPanel" type="Control"]
+margin_right = 560.0
+margin_bottom = 184.0
+rect_pivot_offset = Vector2( 280, 184 )
+mouse_filter = 2
+
+[node name="PreviousButton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -104.0
+margin_right = 80.0
+margin_bottom = -24.0
+
+[node name="Icon" type="TextureRect" parent="PreviousButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_right = -104.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="ShopButton" type="Button" parent="Panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -112.0
+margin_right = 112.0
+margin_bottom = -16.0
+
+[node name="Icon" type="TextureRect" parent="Panel/ShopButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+
+[node name="SaleButton" type="Button" parent="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 128.0
+margin_top = -112.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "SALE"
+
+[node name="LevelLabel" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -120.0
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="NextButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -104.0
+margin_bottom = -24.0
+
+[node name="Icon" type="TextureRect" parent="NextButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+flip_h = true
