@@ -87,17 +87,14 @@ tracks/2/keys = {
 } ]
 }
 
-[node name="Main" type="Node"]
-
-[node name="UI" type="ColorRect" parent="."]
-unique_name_in_owner = true
+[node name="Main" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 7 )
 color = Color( 0.188235, 0.188235, 0.188235, 1 )
 
-[node name="InterfaceSwitch" type="Control" parent="UI"]
+[node name="InterfaceSwitch" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 360, 640 )
@@ -105,7 +102,7 @@ mouse_filter = 2
 script = ExtResource( 2 )
 open_interface = "Menu"
 
-[node name="Menu" type="Control" parent="UI/InterfaceSwitch"]
+[node name="Menu" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -114,12 +111,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="UI/InterfaceSwitch/Menu"]
+[node name="Panel" type="Control" parent="InterfaceSwitch/Menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="GameNameLabel" type="Label" parent="UI/InterfaceSwitch/Menu/Panel"]
+[node name="GameNameLabel" type="Label" parent="InterfaceSwitch/Menu/Panel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -130,7 +127,7 @@ text = "Clicker"
 align = 1
 valign = 1
 
-[node name="MenuControl" type="Control" parent="UI/InterfaceSwitch/Menu/Panel"]
+[node name="MenuControl" type="Control" parent="InterfaceSwitch/Menu/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -141,7 +138,7 @@ margin_right = 248.0
 margin_bottom = 64.0
 mouse_filter = 2
 
-[node name="PlayPanel" type="Panel" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl"]
+[node name="PlayPanel" type="Panel" parent="InterfaceSwitch/Menu/Panel/MenuControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -152,7 +149,7 @@ margin_right = 104.0
 margin_bottom = 64.0
 mouse_filter = 2
 
-[node name="PlayButton" type="Button" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
+[node name="PlayButton" type="Button" parent="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -160,7 +157,7 @@ margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -173,21 +170,21 @@ mouse_filter = 2
 texture = ExtResource( 11 )
 expand = true
 
-[node name="DecorativePanel1" type="Panel" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
+[node name="DecorativePanel1" type="Panel" parent="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
 margin_left = -144.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = 32.0
 mouse_filter = 2
 
-[node name="DecorativePanel2" type="Panel" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
+[node name="DecorativePanel2" type="Panel" parent="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel"]
 margin_left = -80.0
 margin_top = 48.0
 margin_right = -16.0
 margin_bottom = 64.0
 mouse_filter = 2
 
-[node name="SettingsButton" type="Button" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl"]
+[node name="SettingsButton" type="Button" parent="InterfaceSwitch/Menu/Panel/MenuControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -197,7 +194,7 @@ margin_top = -40.0
 margin_right = 200.0
 margin_bottom = 40.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -210,7 +207,7 @@ mouse_filter = 2
 texture = ExtResource( 17 )
 expand = true
 
-[node name="InfoButton" type="Button" parent="UI/InterfaceSwitch/Menu/Panel"]
+[node name="InfoButton" type="Button" parent="InterfaceSwitch/Menu/Panel"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 32.0
@@ -218,7 +215,7 @@ margin_top = -112.0
 margin_right = 112.0
 margin_bottom = -32.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Menu/Panel/InfoButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/InfoButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -231,7 +228,7 @@ mouse_filter = 2
 texture = ExtResource( 18 )
 expand = true
 
-[node name="QuitButton" type="Button" parent="UI/InterfaceSwitch/Menu/Panel"]
+[node name="QuitButton" type="Button" parent="InterfaceSwitch/Menu/Panel"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -241,7 +238,7 @@ margin_top = -112.0
 margin_right = -32.0
 margin_bottom = -32.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Menu/Panel/QuitButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/QuitButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -254,7 +251,7 @@ mouse_filter = 2
 texture = ExtResource( 12 )
 expand = true
 
-[node name="Play" type="Control" parent="UI/InterfaceSwitch"]
+[node name="Play" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -263,24 +260,24 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="UI/InterfaceSwitch/Play"]
+[node name="Panel" type="Control" parent="InterfaceSwitch/Play"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="UI/InterfaceSwitch/Play/Panel"]
+[node name="ProgressBar" type="ProgressBar" parent="InterfaceSwitch/Play/Panel"]
 anchor_right = 1.0
 margin_bottom = 72.0
 mouse_filter = 2
 
-[node name="Wrapper" type="Control" parent="UI/InterfaceSwitch/Play/Panel"]
+[node name="Wrapper" type="Control" parent="InterfaceSwitch/Play/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 72.0
 mouse_filter = 2
 
-[node name="TopPanel" type="Control" parent="UI/InterfaceSwitch/Play/Panel/Wrapper"]
+[node name="TopPanel" type="Control" parent="InterfaceSwitch/Play/Panel/Wrapper"]
 anchor_right = 1.0
 margin_left = 32.0
 margin_top = 32.0
@@ -288,11 +285,11 @@ margin_right = -32.0
 margin_bottom = 112.0
 mouse_filter = 2
 
-[node name="MenuButton" type="Button" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="MenuButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_bottom = 1.0
 margin_right = 80.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -305,7 +302,7 @@ mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 
-[node name="CPSLabel" type="Label" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="CPSLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 104.0
@@ -314,7 +311,7 @@ margin_right = 280.0
 text = "CPS: 0"
 valign = 1
 
-[node name="RecordLabel" type="Label" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="RecordLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 104.0
@@ -325,7 +322,7 @@ custom_fonts/font = ExtResource( 5 )
 text = "RECORD: 0"
 valign = 1
 
-[node name="ScoreLabel" type="Label" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="ScoreLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -338,7 +335,7 @@ text = "SCORE"
 align = 2
 valign = 1
 
-[node name="ScoreValueLabel" type="Label" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="ScoreValueLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -349,13 +346,13 @@ text = "0"
 align = 2
 valign = 1
 
-[node name="LevelButton" type="Button" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="LevelButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -80.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LevelButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LevelButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -368,13 +365,13 @@ mouse_filter = 2
 texture = ExtResource( 16 )
 expand = true
 
-[node name="ImprovementsPanel" parent="UI/InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
+[node name="ImprovementsPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -56.0
 margin_bottom = 248.0
 
-[node name="ShopPanel" parent="UI/InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 6 )]
+[node name="ShopPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 6 )]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -385,7 +382,7 @@ margin_top = -372.0
 margin_right = 280.0
 margin_bottom = 372.0
 
-[node name="ControlPanel" parent="UI/InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 8 )]
+[node name="ControlPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 8 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -395,7 +392,7 @@ margin_top = -184.0
 margin_right = 280.0
 margin_bottom = 0.0
 
-[node name="Settings" type="Control" parent="UI/InterfaceSwitch"]
+[node name="Settings" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -404,19 +401,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="UI/InterfaceSwitch/Settings"]
+[node name="Panel" type="Control" parent="InterfaceSwitch/Settings"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="BackButton" type="Button" parent="UI/InterfaceSwitch/Settings/Panel"]
+[node name="BackButton" type="Button" parent="InterfaceSwitch/Settings/Panel"]
 margin_left = 32.0
 margin_top = 32.0
 margin_right = 112.0
 margin_bottom = 112.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Settings/Panel/BackButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Settings/Panel/BackButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -429,13 +426,13 @@ mouse_filter = 2
 texture = ExtResource( 19 )
 expand = true
 
-[node name="Wrapper" type="Control" parent="UI/InterfaceSwitch/Settings/Panel"]
+[node name="Wrapper" type="Control" parent="InterfaceSwitch/Settings/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 112.0
 mouse_filter = 2
 
-[node name="SettingsControl" type="Control" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper"]
+[node name="SettingsControl" type="Control" parent="InterfaceSwitch/Settings/Panel/Wrapper"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -446,7 +443,7 @@ margin_right = 200.0
 margin_bottom = 200.0
 mouse_filter = 2
 
-[node name="LanguagePanel" type="Panel" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
+[node name="LanguagePanel" type="Panel" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -457,7 +454,7 @@ margin_right = 200.0
 margin_bottom = -104.0
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel"]
+[node name="Label" type="Label" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -467,7 +464,7 @@ margin_bottom = -16.0
 text = "Language"
 valign = 1
 
-[node name="OptionButton" type="OptionButton" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel"]
+[node name="OptionButton" type="OptionButton" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -479,7 +476,7 @@ text = "RU"
 items = [ "EN", null, false, 0, null, "RU", null, false, 1, null, "TR", null, false, 2, null ]
 selected = 1
 
-[node name="ScalePanel" type="Panel" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
+[node name="ScalePanel" type="Panel" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -490,7 +487,7 @@ margin_right = 200.0
 margin_bottom = 24.0
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel"]
+[node name="Label" type="Label" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -500,7 +497,7 @@ margin_bottom = -16.0
 text = "Scale"
 valign = 1
 
-[node name="OptionButton" type="OptionButton" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel"]
+[node name="OptionButton" type="OptionButton" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -512,7 +509,7 @@ text = "Tablet"
 items = [ "Mobile", null, false, 0, null, "Tablet", null, false, 1, null, "Desktop", null, false, 2, null ]
 selected = 1
 
-[node name="SoundPanel" type="Panel" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
+[node name="SoundPanel" type="Panel" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -523,14 +520,14 @@ margin_right = 200.0
 margin_bottom = 200.0
 mouse_filter = 2
 
-[node name="DecorativePanel" type="Panel" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
+[node name="DecorativePanel" type="Panel" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
 margin_left = 16.0
 margin_top = -80.0
 margin_right = 216.0
 margin_bottom = -72.0
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
+[node name="Label" type="Label" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
 anchor_right = 1.0
 margin_left = 16.0
 margin_top = -56.0
@@ -539,7 +536,7 @@ margin_bottom = -16.0
 text = "Sound: 0%"
 valign = 1
 
-[node name="HSlider" type="HSlider" parent="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
+[node name="HSlider" type="HSlider" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/SoundPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 24.0
@@ -548,7 +545,7 @@ margin_right = -24.0
 margin_bottom = -16.0
 focus_mode = 0
 
-[node name="Info" type="Control" parent="UI/InterfaceSwitch"]
+[node name="Info" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -557,19 +554,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="UI/InterfaceSwitch/Info"]
+[node name="Panel" type="Control" parent="InterfaceSwitch/Info"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="BackButton" type="Button" parent="UI/InterfaceSwitch/Info/Panel"]
+[node name="BackButton" type="Button" parent="InterfaceSwitch/Info/Panel"]
 margin_left = 32.0
 margin_top = 32.0
 margin_right = 112.0
 margin_bottom = 112.0
 
-[node name="Icon" type="TextureRect" parent="UI/InterfaceSwitch/Info/Panel/BackButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Info/Panel/BackButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -582,13 +579,13 @@ mouse_filter = 2
 texture = ExtResource( 19 )
 expand = true
 
-[node name="Wrapper" type="Control" parent="UI/InterfaceSwitch/Info/Panel"]
+[node name="Wrapper" type="Control" parent="InterfaceSwitch/Info/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 112.0
 mouse_filter = 2
 
-[node name="InfoPanel" type="Panel" parent="UI/InterfaceSwitch/Info/Panel/Wrapper"]
+[node name="InfoPanel" type="Panel" parent="InterfaceSwitch/Info/Panel/Wrapper"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -598,7 +595,7 @@ margin_top = -288.0
 margin_right = 256.0
 margin_bottom = 288.0
 
-[node name="Label" type="Label" parent="UI/InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
+[node name="Label" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -609,16 +606,16 @@ text = "Clicker is a fun game where the main gameplay is to perform a lot of mou
 valign = 1
 autowrap = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 anims/play = SubResource( 2 )
 
-[connection signal="pressed" from="UI/InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
-[connection signal="pressed" from="UI/InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
-[connection signal="pressed" from="UI/InterfaceSwitch/Menu/Panel/InfoButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
-[connection signal="pressed" from="UI/InterfaceSwitch/Menu/Panel/QuitButton" to="UI/InterfaceSwitch/Menu" method="quit"]
-[connection signal="pressed" from="UI/InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
-[connection signal="pressed" from="UI/InterfaceSwitch/Settings/Panel/BackButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
-[connection signal="item_selected" from="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton" to="UI/InterfaceSwitch/Settings" method="_on_language_selected"]
-[connection signal="item_selected" from="UI/InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel/OptionButton" to="UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
-[connection signal="pressed" from="UI/InterfaceSwitch/Info/Panel/BackButton" to="UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/InfoButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu" method="quit"]
+[connection signal="pressed" from="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="pressed" from="InterfaceSwitch/Settings/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_language_selected"]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_scale_selected"]
+[connection signal="pressed" from="InterfaceSwitch/Info/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]

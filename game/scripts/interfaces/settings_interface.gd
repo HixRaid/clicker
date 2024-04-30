@@ -2,9 +2,10 @@ extends "res://game/scripts/interfaces/interface.gd"
 
 onready var language_option_button = $Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton
 onready var scale_option_button = $Panel/Wrapper/SettingsControl/ScalePanel/OptionButton
-onready var ui_control = $"%UI"
+onready var ui_control = $"../.."
 
 func _ready():
+	
 	if OS.has_feature("mobile") or OS.has_feature("web") and JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)", true):
 		_on_scale_selected(0)
 		scale_option_button.selected = 0
