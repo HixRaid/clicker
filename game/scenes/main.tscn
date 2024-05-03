@@ -372,7 +372,6 @@ margin_top = -56.0
 margin_bottom = 248.0
 
 [node name="ShopPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 6 )]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
