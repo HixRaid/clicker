@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=2]
@@ -12,11 +12,311 @@
 [ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=10]
 [ext_resource path="res://game/images/ui/play.png" type="Texture" id=11]
 [ext_resource path="res://game/images/ui/exit.png" type="Texture" id=12]
+[ext_resource path="res://game/scripts/ui/panel_visibility_switch.gd" type="Script" id=13]
 [ext_resource path="res://game/images/ui/menu.png" type="Texture" id=14]
 [ext_resource path="res://game/images/ui/level.png" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/settings.png" type="Texture" id=17]
 [ext_resource path="res://game/images/ui/info.png" type="Texture" id=18]
 [ext_resource path="res://game/images/ui/back.png" type="Texture" id=19]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("LabelsControl:margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 104.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LabelsControl:margin_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -104.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuButton:rect_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButton:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButton:rect_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "close"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("LabelsControl:margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 104.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LabelsControl:margin_right")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -104.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuButton:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuButton:rect_scale")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButton:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButton:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButton:rect_scale")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "open"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath("LabelsControl:margin_left")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 104.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LabelsControl:margin_right")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -104.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuButton:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuButton:rect_scale")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButton:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButton:modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButton:rect_scale")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -284,10 +584,15 @@ margin_top = 32.0
 margin_right = -32.0
 margin_bottom = 112.0
 mouse_filter = 2
+script = ExtResource( 13 )
 
 [node name="MenuButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
-anchor_bottom = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -40.0
 margin_right = 80.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 40, 40 )
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton"]
 anchor_left = 0.5
@@ -302,55 +607,15 @@ mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 
-[node name="CPSLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 104.0
-margin_top = -40.0
-margin_right = 280.0
-text = "CPS: 0"
-valign = 1
-
-[node name="RecordLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 104.0
-margin_top = 8.0
-margin_right = 280.0
-margin_bottom = 40.0
-custom_fonts/font = ExtResource( 5 )
-text = "RECORD: 0"
-valign = 1
-
-[node name="ScoreLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = 304.0
-margin_top = -40.0
-margin_right = -104.0
-margin_bottom = -8.0
-custom_fonts/font = ExtResource( 5 )
-text = "SCORE"
-align = 2
-valign = 1
-
-[node name="ScoreValueLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = 304.0
-margin_right = -104.0
-margin_bottom = 40.0
-text = "0"
-align = 2
-valign = 1
-
 [node name="LevelButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 margin_left = -80.0
+margin_top = -40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 40, 40 )
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LevelButton"]
 anchor_left = 0.5
@@ -364,6 +629,58 @@ margin_bottom = 24.0
 mouse_filter = 2
 texture = ExtResource( 16 )
 expand = true
+
+[node name="LabelsControl" type="Control" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_right = -104.0
+mouse_filter = 2
+
+[node name="CPSLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -40.0
+margin_right = 176.0
+text = "CPS: 0"
+valign = 1
+
+[node name="RecordLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = 8.0
+margin_right = 176.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 5 )
+text = "RECORD: 0"
+valign = 1
+
+[node name="ScoreLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 200.0
+margin_top = -40.0
+margin_bottom = -8.0
+custom_fonts/font = ExtResource( 5 )
+text = "SCORE"
+align = 2
+valign = 1
+
+[node name="ScoreValueLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 200.0
+margin_bottom = 40.0
+text = "0"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+anims/RESET = SubResource( 5 )
+anims/close = SubResource( 3 )
+anims/open = SubResource( 4 )
 
 [node name="ImprovementsPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
 anchor_top = 0.5

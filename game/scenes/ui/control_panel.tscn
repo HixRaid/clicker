@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://game/images/ui/arrow_left.png" type="Texture" id=2]
 [ext_resource path="res://game/images/ui/basket.png" type="Texture" id=3]
 [ext_resource path="res://game/resources/theme/styles/bottom_panel_style.tres" type="StyleBox" id=4]
@@ -237,7 +236,6 @@ tracks/5/keys = {
 margin_right = 560.0
 margin_bottom = 184.0
 mouse_filter = 2
-theme = ExtResource( 1 )
 script = ExtResource( 5 )
 
 [node name="PreviousButton" type="Button" parent="."]
