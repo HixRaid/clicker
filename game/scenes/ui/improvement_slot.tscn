@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://game/resources/theme/styles/empty_style.tres" type="StyleBox" id=1]
+[ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=1]
 [ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=3]
 [ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=4]
@@ -40,9 +40,9 @@ margin_left = -190.0
 margin_top = -40.0
 margin_right = -22.0
 margin_bottom = 40.0
+focus_mode = 0
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/focus = ExtResource( 1 )
-custom_styles/disabled = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
 text = "Buy"

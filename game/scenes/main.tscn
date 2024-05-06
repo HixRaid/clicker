@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=2]
@@ -14,10 +14,13 @@
 [ext_resource path="res://game/images/ui/exit.png" type="Texture" id=12]
 [ext_resource path="res://game/scripts/ui/panel_visibility_switch.gd" type="Script" id=13]
 [ext_resource path="res://game/images/ui/menu.png" type="Texture" id=14]
+[ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=15]
 [ext_resource path="res://game/images/ui/level.png" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/settings.png" type="Texture" id=17]
 [ext_resource path="res://game/images/ui/info.png" type="Texture" id=18]
 [ext_resource path="res://game/images/ui/back.png" type="Texture" id=19]
+[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=20]
+[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=21]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -456,6 +459,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton"]
 anchor_left = 0.5
@@ -493,6 +497,7 @@ margin_left = 120.0
 margin_top = -40.0
 margin_right = 200.0
 margin_bottom = 40.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton"]
 anchor_left = 0.5
@@ -514,6 +519,7 @@ margin_left = 32.0
 margin_top = -112.0
 margin_right = 112.0
 margin_bottom = -32.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/InfoButton"]
 anchor_left = 0.5
@@ -537,6 +543,7 @@ margin_left = -112.0
 margin_top = -112.0
 margin_right = -32.0
 margin_bottom = -32.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Menu/Panel/QuitButton"]
 anchor_left = 0.5
@@ -593,6 +600,7 @@ margin_top = -40.0
 margin_right = 80.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 40, 40 )
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton"]
 anchor_left = 0.5
@@ -616,6 +624,11 @@ margin_left = -80.0
 margin_top = -40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 40, 40 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 21 )
+custom_styles/disabled = ExtResource( 15 )
+custom_styles/normal = ExtResource( 20 )
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LevelButton"]
 anchor_left = 0.5
@@ -728,6 +741,7 @@ margin_left = 32.0
 margin_top = 32.0
 margin_right = 112.0
 margin_bottom = 112.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Settings/Panel/BackButton"]
 anchor_left = 0.5
@@ -881,6 +895,7 @@ margin_left = 32.0
 margin_top = 32.0
 margin_right = 112.0
 margin_bottom = 112.0
+focus_mode = 0
 
 [node name="Icon" type="TextureRect" parent="InterfaceSwitch/Info/Panel/BackButton"]
 anchor_left = 0.5
