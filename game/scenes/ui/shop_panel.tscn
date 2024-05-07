@@ -2,7 +2,7 @@
 
 [ext_resource path="res://game/scripts/ui/panel_visibility_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scenes/ui/improvement_slot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://game/images/ui/arrow_left.png" type="Texture" id=3]
+[ext_resource path="res://game/images/ui/arrow_left.tres" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001

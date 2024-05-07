@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/basket.png-0b2904360a840c60ad8619242e37c3af.stex"
+path="res://.import/ui_atlas.png-437b00995a30ecf7f580c54c874f7c53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/images/ui/basket.png"
-dest_files=[ "res://.import/basket.png-0b2904360a840c60ad8619242e37c3af.stex" ]
+source_file="res://game/images/ui_atlas.png"
+dest_files=[ "res://.import/ui_atlas.png-437b00995a30ecf7f580c54c874f7c53.stex" ]
 
 [params]
 

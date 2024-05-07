@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://game/images/ui/info.png" type="Texture" id=1]
+[ext_resource path="res://game/images/ui/info.tres" type="Texture" id=1]
 [ext_resource path="res://game/resources/theme/styles/left_panel_style.tres" type="StyleBox" id=2]
 [ext_resource path="res://game/scripts/ui/panel_visibility_switch.gd" type="Script" id=3]
 [ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=4]
