@@ -826,6 +826,7 @@ margin_top = -188.0
 margin_right = 188.0
 margin_bottom = 188.0
 rect_pivot_offset = Vector2( 188, 188 )
+mouse_filter = 0
 texture = ExtResource( 22 )
 expand = true
 script = ExtResource( 23 )
@@ -834,6 +835,8 @@ script = ExtResource( 23 )
 anims/RESET = SubResource( 8 )
 anims/close = SubResource( 6 )
 anims/open = SubResource( 7 )
+
+[node name="Tween" type="Tween" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
 
 [node name="ImprovementsPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
 anchor_top = 0.5
