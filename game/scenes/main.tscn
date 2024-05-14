@@ -838,6 +838,9 @@ anims/open = SubResource( 7 )
 
 [node name="Tween" type="Tween" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
 
+[node name="Timer" type="Timer" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
+wait_time = 0.1
+
 [node name="ImprovementsPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -1089,6 +1092,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/InfoButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="timeout" from="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage/Timer" to="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage" method="_on_timeout"]
 [connection signal="pressed" from="InterfaceSwitch/Settings/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_language_selected"]
 [connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_scale_selected"]

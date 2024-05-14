@@ -3,8 +3,11 @@
 [ext_resource path="res://game/scripts/ui/click_info_label.gd" type="Script" id=1]
 
 [node name="ClickInfoLabel" type="Label"]
-margin_bottom = 14.0
+margin_right = 192.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 96, 20 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "fww"
 align = 1
 valign = 1
 script = ExtResource( 1 )
