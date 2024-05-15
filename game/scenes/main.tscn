@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=21]
 [ext_resource path="res://game/images/charecters/character_1.png" type="Texture" id=22]
 [ext_resource path="res://game/scripts/ui/character_image.gd" type="Script" id=23]
+[ext_resource path="res://game/scripts/interfaces/play_interface.gd" type="Script" id=24]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -680,10 +681,11 @@ texture = ExtResource( 12 )
 expand = true
 
 [node name="Play" type="Control" parent="InterfaceSwitch"]
+unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 1 )
+script = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }

@@ -5,6 +5,7 @@ var clickable = true
 onready var click_info_label = load("res://game/scenes/ui/click_info_label.tscn") 
 onready var tween = $Tween
 onready var timer = $Timer
+onready var play_interface = $"%Play"
 
 
 func set_visible(value):
@@ -16,8 +17,9 @@ func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed == true and clickable:
 		clickable = false
 		timer.start()
+		var count = play_interface.add_score()
 		animate()
-		create_click_info_label(event.position)
+		create_click_info_label(event.position, count)
 
 
 func animate():
@@ -32,10 +34,10 @@ func animate():
 	tween.start()
 
 
-func create_click_info_label(position):
+func create_click_info_label(position, count):
 	var node = click_info_label.instance()
 	add_child(node)
-	node.set_params(position, 1)
+	node.set_params(position, count)
 
 
 func _on_timeout():
