@@ -1,9 +1,9 @@
-extends "res://game/scripts/interfaces/interface.gd"
+extends Node
 
 var count = 0
 var one_click_count = 1
 
-onready var score_value_label = $Panel/Wrapper/TopPanel/LabelsControl/ScoreValueLabel
+onready var score_value_label = $"../Panel/Wrapper/TopPanel/LabelsControl/ScoreLabel"
 
 
 func add_score():

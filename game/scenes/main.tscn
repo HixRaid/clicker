@@ -1,9 +1,8 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=2]
-[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=3]
-[ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=4]
+[ext_resource path="res://game/scripts/controllers/settings_controller.gd" type="Script" id=3]
 [ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://game/scenes/ui/shop_panel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=7]
@@ -23,7 +22,9 @@
 [ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=21]
 [ext_resource path="res://game/images/charecters/character_1.png" type="Texture" id=22]
 [ext_resource path="res://game/scripts/ui/character_image.gd" type="Script" id=23]
-[ext_resource path="res://game/scripts/interfaces/play_interface.gd" type="Script" id=24]
+[ext_resource path="res://game/scripts/controllers/clicker_controller.gd" type="Script" id=24]
+[ext_resource path="res://game/scripts/controllers/menu_controller.gd" type="Script" id=25]
+[ext_resource path="res://game/scripts/ui/main_control.gd" type="Script" id=26]
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -518,6 +519,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 theme = ExtResource( 7 )
 color = Color( 0.188235, 0.188235, 0.188235, 1 )
+script = ExtResource( 26 )
 
 [node name="InterfaceSwitch" type="Control" parent="."]
 anchor_right = 1.0
@@ -531,10 +533,13 @@ open_interface = "Menu"
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="MenuСontroller" type="Node" parent="InterfaceSwitch/Menu"]
+script = ExtResource( 25 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Menu"]
 anchor_right = 1.0
@@ -680,34 +685,37 @@ mouse_filter = 2
 texture = ExtResource( 12 )
 expand = true
 
-[node name="Play" type="Control" parent="InterfaceSwitch"]
-unique_name_in_owner = true
+[node name="Clicker" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 24 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="InterfaceSwitch/Play"]
+[node name="ClickerСontroller" type="Node" parent="InterfaceSwitch/Clicker"]
+unique_name_in_owner = true
+script = ExtResource( 24 )
+
+[node name="Panel" type="Control" parent="InterfaceSwitch/Clicker"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="InterfaceSwitch/Play/Panel"]
+[node name="ProgressBar" type="ProgressBar" parent="InterfaceSwitch/Clicker/Panel"]
 anchor_right = 1.0
 margin_bottom = 72.0
 mouse_filter = 2
 
-[node name="Wrapper" type="Control" parent="InterfaceSwitch/Play/Panel"]
+[node name="Wrapper" type="Control" parent="InterfaceSwitch/Clicker/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 72.0
 mouse_filter = 2
 
-[node name="TopPanel" type="Control" parent="InterfaceSwitch/Play/Panel/Wrapper"]
+[node name="TopPanel" type="Control" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
 anchor_right = 1.0
 margin_left = 32.0
 margin_top = 32.0
@@ -716,7 +724,7 @@ margin_bottom = 112.0
 mouse_filter = 2
 script = ExtResource( 13 )
 
-[node name="MenuButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="MenuButton" type="Button" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -40.0
@@ -725,7 +733,7 @@ margin_bottom = 40.0
 rect_pivot_offset = Vector2( 40, 40 )
 focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/MenuButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -738,7 +746,7 @@ mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 
-[node name="LevelButton" type="Button" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="LevelButton" type="Button" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -753,7 +761,7 @@ custom_styles/pressed = ExtResource( 21 )
 custom_styles/disabled = ExtResource( 15 )
 custom_styles/normal = ExtResource( 20 )
 
-[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LevelButton"]
+[node name="Icon" type="TextureRect" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/LevelButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -766,14 +774,14 @@ mouse_filter = 2
 texture = ExtResource( 16 )
 expand = true
 
-[node name="LabelsControl" type="Control" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="LabelsControl" type="Control" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 104.0
 margin_right = -104.0
 mouse_filter = 2
 
-[node name="CPSLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+[node name="CPSLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/LabelsControl"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -40.0
@@ -781,7 +789,7 @@ margin_right = 176.0
 text = "CPS: 0"
 valign = 1
 
-[node name="RecordLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+[node name="RecordLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/LabelsControl"]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = 8.0
@@ -791,7 +799,7 @@ custom_fonts/font = ExtResource( 5 )
 text = "RECORD: 0"
 valign = 1
 
-[node name="ScoreLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+[node name="ScoreTitleLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/LabelsControl"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -803,7 +811,7 @@ text = "SCORE"
 align = 2
 valign = 1
 
-[node name="ScoreValueLabel" type="Label" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/LabelsControl"]
+[node name="ScoreLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/LabelsControl"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -813,12 +821,12 @@ text = "0"
 align = 2
 valign = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Play/Panel/Wrapper/TopPanel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel"]
 anims/RESET = SubResource( 5 )
 anims/close = SubResource( 3 )
 anims/open = SubResource( 4 )
 
-[node name="CharacterImage" type="TextureRect" parent="InterfaceSwitch/Play/Panel/Wrapper"]
+[node name="CharacterImage" type="TextureRect" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -833,23 +841,23 @@ texture = ExtResource( 22 )
 expand = true
 script = ExtResource( 23 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Clicker/Panel/Wrapper/CharacterImage"]
 anims/RESET = SubResource( 8 )
 anims/close = SubResource( 6 )
 anims/open = SubResource( 7 )
 
-[node name="Tween" type="Tween" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
+[node name="Tween" type="Tween" parent="InterfaceSwitch/Clicker/Panel/Wrapper/CharacterImage"]
 
-[node name="Timer" type="Timer" parent="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage"]
+[node name="Timer" type="Timer" parent="InterfaceSwitch/Clicker/Panel/Wrapper/CharacterImage"]
 wait_time = 0.1
 
-[node name="ImprovementsPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 9 )]
+[node name="ImprovementsPanel" parent="InterfaceSwitch/Clicker/Panel/Wrapper" instance=ExtResource( 9 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -56.0
 margin_bottom = 248.0
 
-[node name="ShopPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 6 )]
+[node name="ShopPanel" parent="InterfaceSwitch/Clicker/Panel/Wrapper" instance=ExtResource( 6 )]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -859,7 +867,7 @@ margin_top = -372.0
 margin_right = 280.0
 margin_bottom = 372.0
 
-[node name="ControlPanel" parent="InterfaceSwitch/Play/Panel/Wrapper" instance=ExtResource( 8 )]
+[node name="ControlPanel" parent="InterfaceSwitch/Clicker/Panel/Wrapper" instance=ExtResource( 8 )]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -873,10 +881,13 @@ margin_bottom = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="SettingsСontroller" type="Node" parent="InterfaceSwitch/Settings"]
+script = ExtResource( 3 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Settings"]
 visible = false
@@ -1089,13 +1100,13 @@ autowrap = true
 anims/RESET = SubResource( 1 )
 anims/play = SubResource( 2 )
 
-[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Play" ]]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MenuControl/PlayPanel/PlayButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Clicker" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MenuControl/SettingsButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/InfoButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
-[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu" method="quit"]
-[connection signal="pressed" from="InterfaceSwitch/Play/Panel/Wrapper/TopPanel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
-[connection signal="timeout" from="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage/Timer" to="InterfaceSwitch/Play/Panel/Wrapper/CharacterImage" method="_on_timeout"]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu/MenuСontroller" method="quit"]
+[connection signal="pressed" from="InterfaceSwitch/Clicker/Panel/Wrapper/TopPanel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="timeout" from="InterfaceSwitch/Clicker/Panel/Wrapper/CharacterImage/Timer" to="InterfaceSwitch/Clicker/Panel/Wrapper/CharacterImage" method="_on_timeout"]
 [connection signal="pressed" from="InterfaceSwitch/Settings/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
-[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_language_selected"]
-[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_scale_selected"]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings/SettingsСontroller" method="_on_language_selected"]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsControl/ScalePanel/OptionButton" to="InterfaceSwitch/Settings/SettingsСontroller" method="_on_scale_selected"]
 [connection signal="pressed" from="InterfaceSwitch/Info/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
