@@ -6,6 +6,7 @@ export var open_interface = ""
 
 var story = []
 var interfaces = {}
+var can_switch = true
 
 onready var animation_player = $"../AnimationPlayer"
 
@@ -36,7 +37,7 @@ func _on_set_visible():
 
 
 func set_visible_interface(name):
-	if name == open_interface:
+	if !can_switch or name == open_interface:
 		return
 	
 	if story.has(name) and interfaces.has(name):
