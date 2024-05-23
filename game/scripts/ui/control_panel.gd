@@ -4,6 +4,7 @@ var is_active = true
 
 onready var interface_switch = $"%InterfaceSwitch"
 onready var animation_player = $AnimationPlayer
+onready var boost_panel = $"../BoostPanel"
 onready var top_panel = $"../TopPanel"
 onready var character_image = $"../CharacterImage"
 onready var improvements_panel = $"../ImprovementsPanel"
@@ -23,6 +24,7 @@ func set_visible_info(value):
 
 func set_visible_panels():
 	top_panel.set_visible_panel(is_active)
+	boost_panel.set_visible_panel(is_active)
 	character_image.set_visible(is_active)
 	improvements_panel.set_visible_panel(is_active)
 	shop_panel.set_visible_panel(!is_active)
