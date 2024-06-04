@@ -1,14 +1,11 @@
 extends Node
 
-var count = 0
-var one_click_count = 1
-
 onready var score_value_label = $"../Panel/Wrapper/TopPanel/LabelsControl/ScoreLabel"
 
 
 func add_score():
-	count += one_click_count
+	Clicker.press()
 	
-	score_value_label.text = str(count)
+	score_value_label.text = str(Clicker.count)
 	
-	return one_click_count
+	return Clicker.one_click_count
