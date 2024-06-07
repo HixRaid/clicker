@@ -1,13 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game/images/ui/close.tres" type="Texture" id=1]
 [ext_resource path="res://game/images/ui/arrow_left.tres" type="Texture" id=2]
 [ext_resource path="res://game/images/ui/basket.tres" type="Texture" id=3]
 [ext_resource path="res://game/resources/theme/styles/bottom_panel_style.tres" type="StyleBox" id=4]
 [ext_resource path="res://game/scripts/ui/control_panel.gd" type="Script" id=5]
-[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=6]
-[ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=7]
-[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=8]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -36,7 +33,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("PreviousButton:rect_scale")
+tracks/2/path = NodePath("Panel/PreviousButton:rect_scale")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -48,7 +45,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("PreviousButton:modulate")
+tracks/3/path = NodePath("Panel/PreviousButton:modulate")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -60,7 +57,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("NextButton:rect_scale")
+tracks/4/path = NodePath("Panel/NextButton:rect_scale")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -72,7 +69,7 @@ tracks/4/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("NextButton:modulate")
+tracks/5/path = NodePath("Panel/NextButton:modulate")
 tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -131,6 +128,66 @@ tracks/9/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel/InfoButton:rect_scale")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel/InfoButton:modulate")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel/ShopButton:margin_right")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -240.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel:margin_left")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 104.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel:margin_right")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -104.0 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "collapse"
@@ -142,7 +199,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 56.0 ]
@@ -160,49 +217,49 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("PreviousButton:rect_scale")
+tracks/2/path = NodePath("Panel/PreviousButton:rect_scale")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("PreviousButton:modulate")
+tracks/3/path = NodePath("Panel/PreviousButton:modulate")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("NextButton:rect_scale")
+tracks/4/path = NodePath("Panel/NextButton:rect_scale")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("NextButton:modulate")
+tracks/5/path = NodePath("Panel/NextButton:modulate")
 tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -255,6 +312,66 @@ tracks/9/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel/InfoButton:rect_scale")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel/InfoButton:modulate")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel/ShopButton:margin_right")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -240.0, -16.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel:margin_left")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 104.0, 176.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel:margin_right")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -104.0, -176.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "expand"
@@ -266,7 +383,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 56.0, 0.0 ]
@@ -278,55 +395,55 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.05, 0.15 ),
+"times": PoolRealArray( 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("PreviousButton:rect_scale")
+tracks/2/path = NodePath("Panel/PreviousButton:rect_scale")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("PreviousButton:modulate")
+tracks/3/path = NodePath("Panel/PreviousButton:modulate")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("NextButton:rect_scale")
+tracks/4/path = NodePath("Panel/NextButton:rect_scale")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("NextButton:modulate")
+tracks/5/path = NodePath("Panel/NextButton:modulate")
 tracks/5/interp = 2
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -379,6 +496,66 @@ tracks/9/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("Panel/InfoButton:rect_scale")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Panel/InfoButton:modulate")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Panel/ShopButton:margin_right")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -16, -240.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Panel:margin_left")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 176.0, 104.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Panel:margin_right")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -176.0, -104.0 ]
+}
 
 [node name="ControlPanel" type="Control"]
 margin_right = 560.0
@@ -386,16 +563,24 @@ margin_bottom = 184.0
 mouse_filter = 2
 script = ExtResource( 5 )
 
-[node name="PreviousButton" type="Button" parent="."]
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 104.0
+margin_right = -104.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="PreviousButton" type="Button" parent="Panel"]
 anchor_top = 1.0
 anchor_bottom = 1.0
+margin_left = -104.0
 margin_top = -104.0
-margin_right = 80.0
+margin_right = -24.0
 margin_bottom = -24.0
 rect_pivot_offset = Vector2( 80, 40 )
 focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="PreviousButton"]
+[node name="Icon" type="TextureRect" parent="Panel/PreviousButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -408,19 +593,25 @@ mouse_filter = 2
 texture = ExtResource( 2 )
 expand = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="InfoButton" type="Button" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 104.0
-margin_right = -104.0
-custom_styles/panel = ExtResource( 4 )
+margin_left = -224.0
+margin_top = -112.0
+margin_right = -16.0
+margin_bottom = -16.0
+rect_pivot_offset = Vector2( 104, 48 )
+text = "INFO"
 
 [node name="ShopButton" type="Button" parent="Panel"]
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = -112.0
-margin_right = 112.0
+margin_right = -240.0
 margin_bottom = -16.0
 focus_mode = 0
 
@@ -438,42 +629,19 @@ mouse_filter = 2
 texture = ExtResource( 3 )
 expand = true
 
-[node name="SaleButton" type="Button" parent="Panel"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 128.0
-margin_top = -112.0
-margin_right = -16.0
-margin_bottom = -16.0
-focus_mode = 0
-custom_styles/hover = ExtResource( 6 )
-custom_styles/pressed = ExtResource( 8 )
-custom_styles/disabled = ExtResource( 7 )
-custom_styles/normal = ExtResource( 6 )
-disabled = true
-text = "SALE"
-
-[node name="LevelLabel" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -120.0
-text = "Level 1"
-align = 1
-valign = 1
-
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" type="Button" parent="Panel"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -80.0
+margin_left = 24.0
 margin_top = -104.0
+margin_right = 104.0
 margin_bottom = -24.0
 rect_pivot_offset = Vector2( 0, 40 )
 focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="NextButton"]
+[node name="Icon" type="TextureRect" parent="Panel/NextButton"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -486,6 +654,14 @@ mouse_filter = 2
 texture = ExtResource( 2 )
 expand = true
 flip_h = true
+
+[node name="LevelLabel" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -120.0
+text = "Level 1"
+align = 1
+valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
