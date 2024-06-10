@@ -210,7 +210,7 @@ scroll_horizontal_enabled = false
 
 [node name="ImprovementsContainer" type="VBoxContainer" parent="BottomPanel/ScrollContainer"]
 margin_right = 520.0
-margin_bottom = 632.0
+margin_bottom = 680.0
 size_flags_horizontal = 3
 custom_constants/separation = 16
 
@@ -223,24 +223,24 @@ margin_top = 108.0
 margin_right = 508.0
 margin_bottom = 200.0
 title = "Improvement 2"
+clicks_per_second = 2
 price = 200
-max_count = 9
 
 [node name="ImprovementSlot3" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
 margin_top = 216.0
 margin_right = 508.0
 margin_bottom = 308.0
 title = "Improvement 3"
+clicks_per_second = 5
 price = 500
-max_count = 8
 
 [node name="ImprovementSlot4" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
 margin_top = 324.0
 margin_right = 508.0
 margin_bottom = 416.0
 title = "Improvement 4"
+clicks_per_second = 10
 price = 1000
-max_count = 7
 can_buy = false
 
 [node name="ImprovementSlot5" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
@@ -248,8 +248,8 @@ margin_top = 432.0
 margin_right = 508.0
 margin_bottom = 524.0
 title = "Improvement 5"
+clicks_per_second = 20
 price = 2000
-max_count = 6
 can_buy = false
 
 [node name="ImprovementSlot6" parent="BottomPanel/ScrollContainer/ImprovementsContainer" instance=ExtResource( 2 )]
@@ -257,8 +257,8 @@ margin_top = 540.0
 margin_right = 508.0
 margin_bottom = 632.0
 title = "Improvement 6"
+clicks_per_second = 50
 price = 5000
-max_count = 5
 can_buy = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

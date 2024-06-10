@@ -8,41 +8,46 @@
 
 [node name="ImprovementSlot" type="Control"]
 margin_right = 496.0
-margin_bottom = 92.0
-rect_min_size = Vector2( 0, 92 )
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
 mouse_filter = 2
 script = ExtResource( 5 )
 
 [node name="TitleLabel" type="Label" parent="."]
 anchor_right = 1.0
-anchor_bottom = 1.0
 margin_right = -208.0
-margin_bottom = -40.0
+margin_bottom = 52.0
 text = "Improvement"
 valign = 1
 
-[node name="PriceCountLabel" type="Label" parent="."]
-anchor_top = 1.0
+[node name="ClicksPerSecondLabel" type="Label" parent="."]
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -32.0
+margin_top = 60.0
 margin_right = -208.0
+margin_bottom = 92.0
 custom_fonts/font = ExtResource( 2 )
-text = "100$ 0/10"
+text = "+1 click/sec"
 valign = 1
 
 [node name="BuyButton" type="Button" parent="."]
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
 margin_left = -190.0
-margin_top = -40.0
+margin_top = 6.0
 margin_right = -22.0
-margin_bottom = 40.0
+margin_bottom = 86.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/disabled = ExtResource( 1 )
 custom_styles/normal = ExtResource( 3 )
 text = "Buy"
+
+[node name="PriceLabel" type="Label" parent="BuyButton"]
+anchor_right = 1.0
+margin_top = 64.0
+margin_bottom = 96.0
+custom_fonts/font = ExtResource( 2 )
+text = "0$"
+align = 1
+valign = 1
