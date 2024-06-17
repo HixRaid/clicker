@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://game/scripts/controllers/clicker_controller.gd" type="Script" id=24]
 [ext_resource path="res://game/scripts/controllers/menu_controller.gd" type="Script" id=25]
 [ext_resource path="res://game/scripts/ui/main_control.gd" type="Script" id=26]
+[ext_resource path="res://game/scenes/ui/info_panel.tscn" type="PackedScene" id=27]
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -663,6 +664,7 @@ __meta__ = {
 script = ExtResource( 25 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Menu"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -820,7 +822,6 @@ unique_name_in_owner = true
 script = ExtResource( 24 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Clicker"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -1034,6 +1035,9 @@ margin_left = -280.0
 margin_top = -184.0
 margin_right = 280.0
 margin_bottom = 0.0
+
+[node name="InfoPanel" parent="InterfaceSwitch/Clicker/Panel/Wrapper" instance=ExtResource( 27 )]
+visible = false
 
 [node name="Settings" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0

@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/images/ui/arrow_left.tres" type="Texture" id=1]
+[ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=2]
+
+[node name="InfoPanel" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -280.0
+margin_top = -372.0
+margin_right = 280.0
+margin_bottom = 372.0
+rect_pivot_offset = Vector2( 280, 372 )
+mouse_filter = 2
+theme = ExtResource( 2 )
+
+[node name="TopPanel" type="Panel" parent="."]
+anchor_right = 1.0
+margin_bottom = 112.0
+mouse_filter = 2
+
+[node name="PreviousButton" type="Button" parent="TopPanel"]
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 96.0
+margin_bottom = -16.0
+focus_mode = 0
+disabled = true
+
+[node name="Icon" type="TextureRect" parent="TopPanel/PreviousButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Label" type="Label" parent="TopPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 112.0
+margin_top = 16.0
+margin_right = -112.0
+margin_bottom = -16.0
+text = "Level 1"
+align = 1
+valign = 1
+
+[node name="NextButton" type="Button" parent="TopPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+
+[node name="Icon" type="TextureRect" parent="TopPanel/NextButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+expand = true
+flip_h = true
+
+[node name="BottomPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 144.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BottomPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id tempore et similique, voluptate aliquam illum voluptatem nobis ratione unde molestias, doloribus, sint placeat veritatis deserunt aperiam labore omnis ut magni! Eius architecto doloremque soluta esse, at repellat tempora culpa, debitis maiores a rem veniam. Enim repellendus, eos inventore magnam deserunt amet dolor explicabo sed ratione, optio itaque? Unde dignissimos at veritatis, beatae voluptates error explicabo autem illo quis quam voluptatem ex ipsa dolore vitae cumque alias, quasi architecto in labore quidem mollitia fugiat. Eaque earum itaque esse perspiciatis ab accusantium officia nihil laboriosam similique. Ipsum suscipit soluta aut eligendi cupiditate!"
