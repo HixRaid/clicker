@@ -28,125 +28,6 @@
 [ext_resource path="res://game/scripts/ui/main_control.gd" type="Script" id=26]
 [ext_resource path="res://game/scenes/ui/info_panel.tscn" type="PackedScene" id=27]
 
-[sub_resource type="Animation" id=9]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=10]
-resource_name = "close"
-length = 0.15
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
-}
-
-[sub_resource type="Animation" id=11]
-resource_name = "open"
-length = 0.15
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 0
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
-}
-
 [sub_resource type="Animation" id=5]
 length = 0.001
 tracks/0/type = "value"
@@ -248,7 +129,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "close"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("LabelsControl:margin_left")
 tracks/0/interp = 2
@@ -256,7 +137,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 104.0, 0.0 ]
@@ -268,7 +149,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ -104.0, 0.0 ]
@@ -280,7 +161,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -292,7 +173,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -304,7 +185,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
@@ -316,7 +197,7 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -328,7 +209,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -340,7 +221,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
@@ -348,7 +229,7 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id=4]
 resource_name = "open"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("LabelsControl:margin_left")
 tracks/0/interp = 2
@@ -356,7 +237,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 104.0 ]
@@ -368,7 +249,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, -104.0 ]
@@ -392,7 +273,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -404,7 +285,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
@@ -428,7 +309,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -440,29 +321,29 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
+"update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -474,7 +355,126 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 1
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "close"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_scale")
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -487,39 +487,39 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=6]
 resource_name = "close"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ) ]
@@ -527,10 +527,10 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "open"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -542,24 +542,24 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:rect_scale")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
@@ -664,7 +664,6 @@ __meta__ = {
 script = ExtResource( 25 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Menu"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -822,6 +821,7 @@ unique_name_in_owner = true
 script = ExtResource( 24 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Clicker"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -836,43 +836,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 72.0
 mouse_filter = 2
-
-[node name="BoostPanel" type="Control" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -216.0
-margin_top = -316.0
-margin_right = 216.0
-margin_bottom = -220.0
-rect_pivot_offset = Vector2( 216, 48 )
-mouse_filter = 2
-script = ExtResource( 13 )
-
-[node name="XLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -32.0
-custom_fonts/font = ExtResource( 4 )
-text = "Boost X10"
-align = 1
-valign = 1
-
-[node name="TimeLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -32.0
-custom_fonts/font = ExtResource( 5 )
-text = "30 sec"
-align = 1
-valign = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
-anims/RESET = SubResource( 9 )
-anims/close = SubResource( 10 )
-anims/open = SubResource( 11 )
 
 [node name="TopPanel" type="Control" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
 anchor_right = 1.0
@@ -985,6 +948,43 @@ anims/RESET = SubResource( 5 )
 anims/close = SubResource( 3 )
 anims/open = SubResource( 4 )
 
+[node name="BoostPanel" type="Control" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -216.0
+margin_top = -292.0
+margin_right = 216.0
+margin_bottom = -196.0
+rect_pivot_offset = Vector2( 216, 48 )
+mouse_filter = 2
+script = ExtResource( 13 )
+
+[node name="XLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -32.0
+custom_fonts/font = ExtResource( 4 )
+text = "Boost X10"
+align = 1
+valign = 1
+
+[node name="TimeLabel" type="Label" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -32.0
+custom_fonts/font = ExtResource( 5 )
+text = "30 sec"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InterfaceSwitch/Clicker/Panel/Wrapper/BoostPanel"]
+anims/RESET = SubResource( 9 )
+anims/close = SubResource( 10 )
+anims/open = SubResource( 11 )
+
 [node name="CharacterImage" type="TextureRect" parent="InterfaceSwitch/Clicker/Panel/Wrapper"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1037,7 +1037,6 @@ margin_right = 280.0
 margin_bottom = 0.0
 
 [node name="InfoPanel" parent="InterfaceSwitch/Clicker/Panel/Wrapper" instance=ExtResource( 27 )]
-visible = false
 
 [node name="Settings" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0

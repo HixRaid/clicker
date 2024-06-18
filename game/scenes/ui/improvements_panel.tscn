@@ -51,7 +51,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "close"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_scale")
 tracks/0/interp = 2
@@ -59,7 +59,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ) ]
@@ -71,7 +71,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
@@ -83,7 +83,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -91,7 +91,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "open"
-length = 0.15
+length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_scale")
 tracks/0/interp = 2
@@ -99,7 +99,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
@@ -111,7 +111,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.15 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
