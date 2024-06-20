@@ -1242,20 +1242,41 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -256.0
-margin_top = -288.0
+margin_top = -344.0
 margin_right = 256.0
-margin_bottom = 288.0
+margin_bottom = 344.0
 
 [node name="Label" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
-margin_top = 16.0
+margin_top = 128.0
 margin_right = -16.0
 margin_bottom = -16.0
 text = "Clicker is a fun game where the main gameplay is to perform a lot of mouse clicks (or taps on the screen) to earn in-game currency or achieve certain goals. The goal of the game is usually to become rich or reach the maximum level of development. Develop your character, improve your skills and become the best in the clicker genre!"
-valign = 1
 autowrap = true
+
+[node name="GameNameLabel" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 96.0
+custom_fonts/font = ExtResource( 10 )
+text = "Clicker"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 96.0
+margin_right = -16.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 5 )
+text = "v0.1 alpha"
+align = 1
+valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
